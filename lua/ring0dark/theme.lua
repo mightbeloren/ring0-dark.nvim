@@ -5,6 +5,7 @@ local theme = {}
 
 theme.set_highlights = function()
 	-- highlights
+	hl(0, "WinSeparator", { fg = c.bg, bg = "NONE" })
 	hl(0, "Normal", { fg = c.fg, bg = c.bg })
 	hl(0, "NormalFloat", { fg = c.fg, bg = c.bg_darker })
 	hl(0, "FloatBorder", { fg = c.fg, bg = c.bg })
