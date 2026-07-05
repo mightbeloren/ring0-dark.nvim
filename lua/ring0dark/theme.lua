@@ -28,9 +28,17 @@ theme.set_highlights = function()
 	hl(0, "String", { fg = c.green, bg = "NONE", italic = true })
 	hl(0, "Identifier", { fg = c.fg, bg = "NONE", italic = true })
 	hl(0, "Title", { fg = c.yellow, bg = "NONE", bold = true })
-	hl(0, "Type", { fg = c.gray, bg = "NONE", bold = false })
-	hl(0, "@type", { fg = c.gray, bg = "NONE", bold = false })
+	-- keywords (control flow, declarations)
 	hl(0, "@keyword", { fg = c.yellow, bg = "NONE", bold = true })
+	hl(0, "@keyword.modifier", { fg = c.yellow, bg = "NONE", bold = true }) -- private, static, readonly
+	hl(0, "@keyword.type", { fg = c.yellow, bg = "NONE", bold = true }) -- class, namespace
+	hl(0, "@keyword.return", { fg = c.yellow, bg = "NONE", bold = true })
+	hl(0, "PreProc", { fg = c.gray, bg = "NONE", bold = false }) -- #include, #define
+	
+	-- types (should NOT be yellow)
+	hl(0, "@type", { fg = c.gray, bg = "NONE", bold = false })
+	hl(0, "@type.builtin", { fg = c.gray, bg = "NONE", bold = false }) -- int, string, bool, double
+	hl(0, "Type", { fg = c.gray, bg = "NONE", bold = false })
 
 	-- diagnostics
 	hl(0, "DiagnosticError", { fg = c.red, bg = "NONE", bold = true })
